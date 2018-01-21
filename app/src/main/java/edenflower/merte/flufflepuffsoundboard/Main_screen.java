@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class Main_screen extends AppCompatActivity {
     private MediaPlayer brumm_player = new MediaPlayer();
@@ -14,7 +16,9 @@ public class Main_screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_screen);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.setContentView(R.layout.activity_main_screen);
     }
 
     public void brumm (View view){
@@ -31,15 +35,8 @@ public class Main_screen extends AppCompatActivity {
                 brumm_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
                 brumm_player.prepare();
-                brumm_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        brumm_player.release();
-                        brumm_player = new MediaPlayer();
-                    }
-                });
-                brumm_player.start();
                 brumm_player.setLooping(true);
+                brumm_player.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
@@ -87,13 +84,6 @@ public class Main_screen extends AppCompatActivity {
                 purr_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
                 purr_player.prepare();
-                purr_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        purr_player.release();
-                        purr_player = new MediaPlayer();
-                    }
-                });
                 purr_player.setLooping(true);
                 purr_player.start();
             } catch(Exception e) {
