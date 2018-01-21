@@ -9,49 +9,49 @@
     tools:layout_editor_absoluteY="0dp"
     tools:context="edenflower.merte.flufflepuffsoundboard.Main_screen">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:onClick="brumm"
-            android:text="@string/brumm"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/brumm" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:onClick="brumm"
+        android:text="@string/brumm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/brumm" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:onClick="gasp"
-            android:text="Gasp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Gasp" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:onClick="gasp"
+        android:text="Gasp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Gasp" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:onClick="purr"
-            android:text="Purr"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-            tools:text="Purr" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:onClick="purr"
+        android:text="Purr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:text="Purr" />
 
     <Button
         android:id="@+id/button4"
@@ -73,7 +73,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:onClick="crazy"
-        android:text="crazy"
+        android:text="bananas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,20 +86,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:onClick="crazy"
-        android:text="crazy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:onClick="crazy"
-        android:text="crazy"
+        android:text="fluffle!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
