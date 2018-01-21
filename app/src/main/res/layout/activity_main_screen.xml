@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="brumm"
+            android:soundEffectsEnabled="false"
             android:text="@string/brumm" />
 
         <Button
@@ -22,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="gasp"
+            android:soundEffectsEnabled="false"
             android:text="@string/gasp" />
 
         <Button
@@ -29,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="purr"
+            android:soundEffectsEnabled="false"
             android:text="@string/purr" />
 
         <Button
@@ -36,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="crazy"
+            android:soundEffectsEnabled="false"
             android:text="@string/crazy" />
 
         <Button
@@ -43,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="crazy"
+            android:soundEffectsEnabled="false"
             android:text="@string/bananas" />
 
         <Button
@@ -50,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="crazy"
+            android:soundEffectsEnabled="false"
             android:text="@string/fluffle" />
     </LinearLayout>
 </ScrollView>
