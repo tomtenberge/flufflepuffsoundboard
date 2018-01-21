@@ -23,9 +23,9 @@ public class Main_screen extends AppCompatActivity {
         }
         else
         {
-            //AssetFileDescriptor descriptor = getAssets().openFd("brumm.ogg");
+            AssetFileDescriptor descriptor = getAssets().openFd("brumm.ogg");
             //brumm_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
-            //descriptor.close();
+            descriptor.close();
         }
     }
 
