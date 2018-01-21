@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FlufflePuff Soundboard</string>
     <string name="brumm">Brummmmmmmmm</string>
+    <string name="gasp">Gasp</string>
+    <string name="purr">Purr</string>
+    <string name="crazy">crazy</string>
+    <string name="bananas">bananas</string>
+    <string name="fluffle">fluffle!</string>
 </resources>
