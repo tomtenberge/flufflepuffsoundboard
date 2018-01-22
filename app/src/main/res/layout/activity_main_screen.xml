@@ -11,11 +11,12 @@
         tools:context="edenflower.merte.flufflepuffsoundboard.Main_screen">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="brumm"
             android:soundEffectsEnabled="false"
+            android:background = "#f9cae9"
             android:text="@string/brumm" />
 
         <Button
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:onClick="gasp"
             android:soundEffectsEnabled="false"
+            android:background = "#f9cae9"
             android:text="@string/gasp" />
 
         <Button
@@ -32,6 +34,7 @@
             android:layout_height="wrap_content"
             android:onClick="purr"
             android:soundEffectsEnabled="false"
+            android:background = "#f9cae9"
             android:text="@string/purr" />
 
         <Button
@@ -40,13 +43,15 @@
             android:layout_height="wrap_content"
             android:onClick="crazy"
             android:soundEffectsEnabled="false"
+            android:background = "#f9cae9"
             android:text="@string/crazy" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="crazy"
+            android:background="#f9cae9"
+            android:onClick="bananas"
             android:soundEffectsEnabled="false"
             android:text="@string/bananas" />
 
@@ -54,8 +59,27 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="crazy"
+            android:background="#f9cae9"
+            android:onClick="fluffle"
             android:soundEffectsEnabled="false"
             android:text="@string/fluffle" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9cae9"
+            android:onClick="puff"
+            android:soundEffectsEnabled="false"
+            android:text="@string/puff" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9cae9"
+            android:onClick="kar"
+            android:soundEffectsEnabled="false"
+            android:text="@string/kar" />
     </LinearLayout>
 </ScrollView>
