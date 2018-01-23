@@ -79,25 +79,6 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void Pfudor_sub (View view){
-        this.setContentView(R.layout.pfudor);
-        if (player_pfu_2.isPlaying()){
-            final Button btn = findViewById(R.id.button2);
-            try {
-                btn.setBackgroundColor(color2);
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-        }
-        if (player_pfu_3.isPlaying()){
-            final Button btn = findViewById(R.id.button3);
-            try {
-                btn.setBackgroundColor(color2);
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
     public void btn_m_1 (View view){
         final Button btn = findViewById(R.id.button1);
         if (player_m_1.isPlaying())
@@ -126,7 +107,7 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void gasp (View view){
+    public void btn_m_2 (View view){
         final Button btn = findViewById(R.id.button2);
         if (player_m_2.isPlaying())
         {
@@ -162,7 +143,7 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void purr (View view){
+    public void btn_m_3 (View view){
         final Button btn = findViewById(R.id.button3);
         if (player_m_3.isPlaying())
         {
@@ -190,7 +171,7 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void crazy (View view){
+    public void btn_m_4 (View view){
         final Button btn = findViewById(R.id.button4);
         if (player_m_4.isPlaying())
         {
@@ -226,7 +207,7 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void van_song (View view){
+    public void btn_m_5 (View view){
         final Button btn = findViewById(R.id.button5);
         if (player_m_5.isPlaying())
         {
@@ -262,7 +243,65 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void Pfudor (View view){
+    public void btn_m_6 (View view){
+        this.setContentView(R.layout.pfudor);
+        if (player_pfu_2.isPlaying()){
+            final Button btn = findViewById(R.id.button2);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_pfu_3.isPlaying()){
+            final Button btn = findViewById(R.id.button3);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void btn_m_7 (View view) {
+
+    }
+    public void btn_m_8 (View view){
+        final Button btn = findViewById(R.id.button8);
+        if (player_m_8.isPlaying())
+        {
+            player_m_8.stop();
+            player_m_8.release();
+            player_m_8 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            try {
+                btn.setBackgroundColor(color2);
+                AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
+                player_m_8.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                descriptor.close();
+                player_m_8.prepare();
+                player_m_8.setLooping(false);
+                player_m_8.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        player_m_8.release();
+                        player_m_8 = new MediaPlayer();
+                        btn.setBackgroundColor(color1);
+                    }
+                });
+                player_m_8.start();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void btn_pfu_2 (View view){
         final Button btn = findViewById(R.id.button2);
         if (player_pfu_2.isPlaying())
         {
@@ -298,7 +337,7 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }    
-    public void Pfudor_metal (View view){
+    public void btn_pfu_3 (View view){
         final Button btn = findViewById(R.id.button3);
         if (player_pfu_3.isPlaying())
         {
@@ -334,40 +373,5 @@ public class Main_screen extends AppCompatActivity {
             }
         }
     }
-    public void meep (View view){
-        final Button btn = findViewById(R.id.button8);
-        if (player_m_8.isPlaying())
-        {
-            player_m_8.stop();
-            player_m_8.release();
-            player_m_8 = new MediaPlayer();
-            try {
-                btn.setBackgroundColor(color1);
-            } catch(Exception e) {
-            e.printStackTrace();
-            }
-        }
-        else
-        {
-            try {
-                btn.setBackgroundColor(color2);
-                AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                player_m_8.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
-                descriptor.close();
-                player_m_8.prepare();
-                player_m_8.setLooping(false);
-                player_m_8.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        player_m_8.release();
-                        player_m_8 = new MediaPlayer();
-                        btn.setBackgroundColor(color1);
-                    }
-                });
-                player_m_8.start();
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+
 }

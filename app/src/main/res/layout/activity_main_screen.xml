@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="gasp"
+            android:onClick="btn_m_2"
             android:soundEffectsEnabled="false"
             android:text="@string/main_2" />
 
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="purr"
+            android:onClick="btn_m_3"
             android:soundEffectsEnabled="false"
             android:text="@string/main_3" />
 
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="crazy"
+            android:onClick="btn_m_4"
             android:soundEffectsEnabled="false"
             android:text="@string/main_4" />
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="van_song"
+            android:onClick="btn_m_5"
             android:soundEffectsEnabled="false"
             android:text="@string/main_5" />
 
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="Pfudor_sub"
+            android:onClick="btn_m_6"
             android:soundEffectsEnabled="false"
             android:text="@string/main_6" />
 
@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="Pfudor"
+            android:onClick="btn_m_7"
             android:soundEffectsEnabled="false"
             android:text="@string/main_7" />
 
@@ -78,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="meep"
+            android:onClick="btn_m_8"
             android:soundEffectsEnabled="false"
             android:text="@string/main_8" />
     </LinearLayout>
