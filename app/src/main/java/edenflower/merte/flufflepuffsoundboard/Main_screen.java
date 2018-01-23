@@ -13,14 +13,14 @@ import android.widget.Button;
 public class Main_screen extends AppCompatActivity {
     private int color1 = Color.rgb(249, 202, 233);
     private int color2 = Color.rgb(219, 166, 201);
-    private MediaPlayer brumm_player = new MediaPlayer();
-    private MediaPlayer gasp_player = new MediaPlayer();
-    private MediaPlayer purr_player = new MediaPlayer();
-    private MediaPlayer crazy_player = new MediaPlayer();
-    private MediaPlayer bananas_player = new MediaPlayer();
-    private MediaPlayer fluffle_player = new MediaPlayer();
-    private MediaPlayer puff_player = new MediaPlayer();
-    private MediaPlayer kar_player = new MediaPlayer();
+    private MediaPlayer player_m_1 = new MediaPlayer();
+    private MediaPlayer player_m_2 = new MediaPlayer();
+    private MediaPlayer player_m_3 = new MediaPlayer();
+    private MediaPlayer player_m_4 = new MediaPlayer();
+    private MediaPlayer player_m_5 = new MediaPlayer();
+    private MediaPlayer player_m_8 = new MediaPlayer();
+    private MediaPlayer player_pfu_2 = new MediaPlayer();
+    private MediaPlayer player_pfu_3 = new MediaPlayer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,26 +28,99 @@ public class Main_screen extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         this.setContentView(R.layout.activity_main_screen);
     }
-
-    public void brumm (View view){
+    public void mainscreen(View view){
+        this.setContentView(R.layout.activity_main_screen);
+        if (player_m_1.isPlaying()){
+            final Button btn = findViewById(R.id.button1);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_m_2.isPlaying()){
+            final Button btn = findViewById(R.id.button2);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_m_3.isPlaying()){
+            final Button btn = findViewById(R.id.button3);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_m_4.isPlaying()){
+            final Button btn = findViewById(R.id.button4);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_m_5.isPlaying()){
+            final Button btn = findViewById(R.id.button5);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_m_8.isPlaying()){
+            final Button btn = findViewById(R.id.button8);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void Pfudor_sub (View view){
+        this.setContentView(R.layout.pfudor);
+        if (player_pfu_2.isPlaying()){
+            final Button btn = findViewById(R.id.button2);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (player_pfu_3.isPlaying()){
+            final Button btn = findViewById(R.id.button3);
+            try {
+                btn.setBackgroundColor(color2);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void btn_m_1 (View view){
         final Button btn = findViewById(R.id.button1);
-        if (brumm_player.isPlaying())
+        if (player_m_1.isPlaying())
         {
-            brumm_player.stop();
-            brumm_player.release();
-            brumm_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_1.stop();
+            player_m_1.release();
+            player_m_1 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
+                btn.setBackgroundColor(color2);
                 AssetFileDescriptor descriptor = getAssets().openFd("brumm.ogg");
-                brumm_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                player_m_1.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                brumm_player.prepare();
-                brumm_player.setLooping(true);
-                brumm_player.start();
+                player_m_1.prepare();
+                player_m_1.setLooping(true);
+                player_m_1.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
@@ -55,31 +128,35 @@ public class Main_screen extends AppCompatActivity {
     }
     public void gasp (View view){
         final Button btn = findViewById(R.id.button2);
-        if (gasp_player.isPlaying())
+        if (player_m_2.isPlaying())
         {
-            gasp_player.stop();
-            gasp_player.release();
-            gasp_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_2.stop();
+            player_m_2.release();
+            player_m_2 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
+                btn.setBackgroundColor(color2);
                 AssetFileDescriptor descriptor = getAssets().openFd("Gasp.ogg");
-                gasp_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                player_m_2.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                gasp_player.prepare();
-                gasp_player.setLooping(false);
-                gasp_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                player_m_2.prepare();
+                player_m_2.setLooping(false);
+                player_m_2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        gasp_player.release();
-                        gasp_player = new MediaPlayer();
+                        player_m_2.release();
+                        player_m_2 = new MediaPlayer();
                         btn.setBackgroundColor(color1);
                     }
                 });
-                gasp_player.start();
+                player_m_2.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
@@ -87,23 +164,27 @@ public class Main_screen extends AppCompatActivity {
     }
     public void purr (View view){
         final Button btn = findViewById(R.id.button3);
-        if (purr_player.isPlaying())
+        if (player_m_3.isPlaying())
         {
-            purr_player.stop();
-            purr_player.release();
-            purr_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_3.stop();
+            player_m_3.release();
+            player_m_3 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
+                btn.setBackgroundColor(color2);
                 AssetFileDescriptor descriptor = getAssets().openFd("purr.ogg");
-                purr_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                player_m_3.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                purr_player.prepare();
-                purr_player.setLooping(true);
-                purr_player.start();
+                player_m_3.prepare();
+                player_m_3.setLooping(true);
+                player_m_3.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
@@ -111,159 +192,179 @@ public class Main_screen extends AppCompatActivity {
     }
     public void crazy (View view){
         final Button btn = findViewById(R.id.button4);
-        if (crazy_player.isPlaying())
+        if (player_m_4.isPlaying())
         {
-            crazy_player.stop();
-            crazy_player.release();
-            crazy_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_4.stop();
+            player_m_4.release();
+            player_m_4 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
+                btn.setBackgroundColor(color2);
                 AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                crazy_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                player_m_4.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                crazy_player.prepare();
-                crazy_player.setLooping(false);
-                crazy_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                player_m_4.prepare();
+                player_m_4.setLooping(false);
+                player_m_4.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        crazy_player.release();
-                        crazy_player = new MediaPlayer();
+                        player_m_4.release();
+                        player_m_4 = new MediaPlayer();
                         btn.setBackgroundColor(color1);
                     }
                 });
-                crazy_player.start();
+                player_m_4.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
         }
     }
-    public void bananas (View view){
+    public void van_song (View view){
         final Button btn = findViewById(R.id.button5);
-        if (bananas_player.isPlaying())
+        if (player_m_5.isPlaying())
         {
-            bananas_player.stop();
-            bananas_player.release();
-            bananas_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_5.stop();
+            player_m_5.release();
+            player_m_5 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
-                AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                bananas_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                btn.setBackgroundColor(color2);
+                AssetFileDescriptor descriptor = getAssets().openFd("Vanheart.ogg");
+                player_m_5.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                bananas_player.prepare();
-                bananas_player.setLooping(false);
-                bananas_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                player_m_5.prepare();
+                player_m_5.setLooping(false);
+                player_m_5.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        bananas_player.release();
-                        bananas_player = new MediaPlayer();
+                        player_m_5.release();
+                        player_m_5 = new MediaPlayer();
                         btn.setBackgroundColor(color1);
                     }
                 });
-                bananas_player.start();
+                player_m_5.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
         }
     }
-    public void fluffle (View view){
-        final Button btn = findViewById(R.id.button6);
-        if (fluffle_player.isPlaying())
+    public void Pfudor (View view){
+        final Button btn = findViewById(R.id.button2);
+        if (player_pfu_2.isPlaying())
         {
-            fluffle_player.stop();
-            fluffle_player.release();
-            fluffle_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_pfu_2.stop();
+            player_pfu_2.release();
+            player_pfu_2 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
-                AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                fluffle_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                btn.setBackgroundColor(color2);
+                AssetFileDescriptor descriptor = getAssets().openFd("PFUDOR.ogg");
+                player_pfu_2.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                fluffle_player.prepare();
-                fluffle_player.setLooping(false);
-                fluffle_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                player_pfu_2.prepare();
+                player_pfu_2.setLooping(false);
+                player_pfu_2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        fluffle_player.release();
-                        fluffle_player = new MediaPlayer();
+                        player_pfu_2.release();
+                        player_pfu_2 = new MediaPlayer();
                         btn.setBackgroundColor(color1);
                     }
                 });
-                fluffle_player.start();
+                player_pfu_2.start();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }    
+    public void Pfudor_metal (View view){
+        final Button btn = findViewById(R.id.button3);
+        if (player_pfu_3.isPlaying())
+        {
+            player_pfu_3.stop();
+            player_pfu_3.release();
+            player_pfu_3 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            try {
+                btn.setBackgroundColor(color2);
+                AssetFileDescriptor descriptor = getAssets().openFd("PFUDOR.ogg");
+                player_pfu_3.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                descriptor.close();
+                player_pfu_3.prepare();
+                player_pfu_3.setLooping(false);
+                player_pfu_3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        player_pfu_3.release();
+                        player_pfu_3 = new MediaPlayer();
+                        btn.setBackgroundColor(color1);
+                    }
+                });
+                player_pfu_3.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }
         }
     }
-    public void puff (View view){
-        final Button btn = findViewById(R.id.button7);
-        if (puff_player.isPlaying())
-        {
-            puff_player.stop();
-            puff_player.release();
-            puff_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
-        }
-        else
-        {
-            btn.setBackgroundColor(color2);
-            try {
-                AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                puff_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
-                descriptor.close();
-                puff_player.prepare();
-                puff_player.setLooping(false);
-                puff_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        puff_player.release();
-                        puff_player = new MediaPlayer();
-                        btn.setBackgroundColor(color1);
-                    }
-                });
-                puff_player.start();
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-    public void kar (View view){
+    public void meep (View view){
         final Button btn = findViewById(R.id.button8);
-        if (kar_player.isPlaying())
+        if (player_m_8.isPlaying())
         {
-            kar_player.stop();
-            kar_player.release();
-            kar_player = new MediaPlayer();
-            btn.setBackgroundColor(color1);
+            player_m_8.stop();
+            player_m_8.release();
+            player_m_8 = new MediaPlayer();
+            try {
+                btn.setBackgroundColor(color1);
+            } catch(Exception e) {
+            e.printStackTrace();
+            }
         }
         else
         {
-            btn.setBackgroundColor(color2);
             try {
+                btn.setBackgroundColor(color2);
                 AssetFileDescriptor descriptor = getAssets().openFd("crazy.ogg");
-                kar_player.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                player_m_8.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
                 descriptor.close();
-                kar_player.prepare();
-                kar_player.setLooping(false);
-                kar_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                player_m_8.prepare();
+                player_m_8.setLooping(false);
+                player_m_8.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        kar_player.release();
-                        kar_player = new MediaPlayer();
+                        player_m_8.release();
+                        player_m_8 = new MediaPlayer();
                         btn.setBackgroundColor(color1);
                     }
                 });
-                kar_player.start();
+                player_m_8.start();
             } catch(Exception e) {
                 e.printStackTrace();
             }

@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">FlufflePuff Soundboard</string>
-    <string name="brumm">Brummmmmmmmm</string>
-    <string name="gasp">Gasp</string>
-    <string name="purr">Purr</string>
-    <string name="crazy">crazy</string>
-    <string name="bananas">bananas</string>
-    <string name="fluffle">fluffle!</string>
-    <string name="puff">stuffs</string>
-    <string name="kar">meep</string>
+    <string name="main_1">Brummmmmmmmm</string>
+    <string name="main_2">Gasp</string>
+    <string name="main_3">Purr</string>
+    <string name="main_4">crazy</string>
+    <string name="main_5">Van Song</string>
+    <string name="main_6">Pfudors</string>
+    <string name="main_7">-</string>
+    <string name="main_8">meep</string>
+    <string name="pfudors_1">Back</string>
+    <string name="pfudors_2">Pfudor</string>
+    <string name="pfudors_3">Pfudor Metal</string>
+    <string name="pfudors_4">-</string>
+    <string name="pfudors_5">-</string>
+    <string name="pfudors_6">-</string>
+    <string name="pfudors_7">-</string>
+    <string name="pfudors_8">-</string>
 </resources>

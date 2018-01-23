@@ -15,27 +15,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="btn_m_1"
+            android:onClick="mainscreen"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_1" />
+            android:text="@string/pfudors_1" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="gasp"
+            android:onClick="Pfudor"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_2" />
+            android:text="@string/pfudors_2" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
-            android:onClick="purr"
+            android:onClick="Pfudor_metal"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_3" />
+            android:text="@string/pfudors_3" />
 
         <Button
             android:id="@+id/button4"
@@ -44,7 +44,7 @@
             android:background="#f9cae9"
             android:onClick="crazy"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_4" />
+            android:text="@string/pfudors_4" />
 
         <Button
             android:id="@+id/button5"
@@ -53,7 +53,7 @@
             android:background="#f9cae9"
             android:onClick="van_song"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_5" />
+            android:text="@string/pfudors_5" />
 
         <Button
             android:id="@+id/button6"
@@ -62,7 +62,7 @@
             android:background="#f9cae9"
             android:onClick="Pfudor_sub"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_6" />
+            android:text="@string/pfudors_6" />
 
         <Button
             android:id="@+id/button7"
@@ -71,7 +71,7 @@
             android:background="#f9cae9"
             android:onClick="Pfudor"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_7" />
+            android:text="@string/pfudors_7" />
 
         <Button
             android:id="@+id/button8"
@@ -80,6 +80,6 @@
             android:background="#f9cae9"
             android:onClick="meep"
             android:soundEffectsEnabled="false"
-            android:text="@string/main_8" />
+            android:text="@string/pfudors_8" />
     </LinearLayout>
 </ScrollView>
