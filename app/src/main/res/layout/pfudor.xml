@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f9cae9">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
+            android:onClick="btn_pfu_4"
             android:soundEffectsEnabled="false"
             android:text="@string/pfudors_4" />
 
@@ -50,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
+            android:onClick="btn_pfu_5"
             android:soundEffectsEnabled="false"
             android:text="@string/pfudors_5" />
 
@@ -58,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
+            android:onClick="btn_pfu_6"
             android:soundEffectsEnabled="false"
             android:text="@string/pfudors_6" />
 
@@ -66,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
+            android:onClick="btn_pfu_7"
             android:soundEffectsEnabled="false"
             android:text="@string/pfudors_7" />
 
@@ -74,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#f9cae9"
+            android:onClick="btn_pfu_8"
             android:soundEffectsEnabled="false"
             android:text="@string/pfudors_8" />
     </LinearLayout>

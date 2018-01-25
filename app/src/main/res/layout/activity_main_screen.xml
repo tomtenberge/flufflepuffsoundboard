@@ -2,7 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="#f9cae9">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,15 +65,6 @@
             android:onClick="btn_m_6"
             android:soundEffectsEnabled="false"
             android:text="@string/main_6" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#f9cae9"
-            android:onClick="btn_m_7"
-            android:soundEffectsEnabled="false"
-            android:text="@string/main_7" />
 
         <Button
             android:id="@+id/button8"
